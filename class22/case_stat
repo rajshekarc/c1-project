@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case $1 in 
+
+1|a|'one') echo "This is one"
+;;
+2|b|'two') echo "This is two"
+;;
+3|c|'three') echo "This is three"
+;;
+4|d|'four') echo "This is four"
+;;
+*) echo "Invalid input"
+esac

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Enter File name with path"
+read file
+
+if [ ! -f $file ];then
+echo "the file does not exist in the path"
+exit 1
+fi
+
+echo "Enter the link name"
+read link
+
+if [ -L $link ];then
+echo "link alread exists"
+else
+ln -s $file $link
+exit 0
+fi

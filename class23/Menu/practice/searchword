@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Enter word to search"
+read word
+grep -l -R "$word" * > log1
+
+if [ $? -eq 0 ];then
+	echo "the word is found in: "
+	cat log1
+else
+	echo "the word in found in any file"
+fi
+rm log1

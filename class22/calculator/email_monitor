@@ -1,0 +1,14 @@
+#!/bin/bash
+
+service='service1 service2 service3'
+
+for i in $service
+do
+ps -ef | grep "$i"
+
+if [ $? -ne 0 ];then
+mail -s "process stopped, please take appropriate action" abc@gmail.com
+fi
+done
+
+

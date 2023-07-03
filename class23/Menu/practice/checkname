@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter name of the file to check"
+read name
+
+if [ -f $name ];then
+echo "It is an file"
+elif [ -d $name ];then
+echo "it is an directory"
+elif [ -L $name ];then
+echo "it is an link"
+else 
+echo "the file does not exist"
+fi
